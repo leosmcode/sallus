@@ -1,0 +1,384 @@
+/* Estilos específicos para a página de filiais */
+
+/* Hero Section Filiais */
+.filiais-hero {
+    min-height: 60vh;
+    background: var(--gradient-dark);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.filiais-hero-content {
+    text-align: center;
+    color: var(--white);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.filiais-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.filiais-subtitle {
+    font-size: 1.3rem;
+    color: var(--light-gray);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    border: 2px solid var(--primary-green);
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    font-size: 1.1rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.search-container input::placeholder {
+    color: var(--light-gray);
+}
+
+.search-container input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 200, 81, 0.3);
+}
+
+.search-container i {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-green);
+    font-size: 1.2rem;
+}
+
+/* Filtros Section */
+.filtros-section {
+    padding: 4rem 0;
+    background: var(--light-gray);
+}
+
+.filtros-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.filtros-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.filtro-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-green);
+    background: var(--white);
+    color: var(--primary-green);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.filtro-btn:hover {
+    background: var(--primary-green);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.filtro-btn.active {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-color: var(--primary-green);
+}
+
+/* Grid de Filiais */
+.filiais-grid-section {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.filiais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.filial-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 200, 81, 0.1);
+    position: relative;
+}
+
+.filial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.filial-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.filial-image .image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 3rem;
+    position: relative;
+}
+
+.filial-image .image-placeholder p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.filial-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--black);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.filial-content {
+    padding: 2rem;
+}
+
+.filial-content h3 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.filial-info {
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.info-item i {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.info-item span {
+    color: var(--text-gray);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.filial-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.filial-actions .btn {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filial-actions .btn-primary {
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.filial-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.filial-actions .btn-secondary {
+    background: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+}
+
+.filial-actions .btn-secondary:hover {
+    background: var(--primary-green);
+    color: var(--white);
+}
+
+/* Estados dos filtros */
+.filial-card.hidden {
+    display: none;
+}
+
+.filial-card.show {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para Filiais */
+@media (max-width: 768px) {
+    .filiais-title {
+        font-size: 2.5rem;
+    }
+    
+    .filiais-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .filtros-grid {
+        gap: 0.5rem;
+    }
+    
+    .filtro-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .filiais-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .filial-actions {
+        flex-direction: column;
+    }
+    
+    .filial-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .filiais-hero {
+        padding-top: 100px;
+        min-height: 50vh;
+    }
+    
+    .filiais-title {
+        font-size: 2rem;
+    }
+    
+    .search-container input {
+        padding: 0.8rem 2.5rem 0.8rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .search-container i {
+        right: 1rem;
+    }
+    
+    .filial-content {
+        padding: 1.5rem;
+    }
+    
+    .filial-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Efeito de loading para busca */
+.filiais-grid.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.filiais-grid.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--primary-green);
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Estilo para link ativo na navegação */
+.nav-link.active {
+    color: var(--primary-green);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}

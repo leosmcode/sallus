@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filiais - SALLUS PROTEÇÃO VEICULAR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="filiais.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>SALLUS</h2>
+                    <span>PROTEÇÃO VEICULAR</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#sobre" class="nav-link">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#servicos" class="nav-link">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#localizacao" class="nav-link">Onde Estamos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="filiais.html" class="nav-link active">Filiais</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section Filiais -->
+    <section class="filiais-hero">
+        <div class="container">
+            <div class="filiais-hero-content">
+                <h1 class="filiais-title">NOSSAS FILIAIS</h1>
+                <p class="filiais-subtitle">
+                    Encontre a filial SALLUS mais próxima de você em todo o Brasil
+                </p>
+                <div class="search-container">
+                    <input type="text" id="searchFiliais" placeholder="Buscar por estado ou cidade...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Filtros por Estado -->
+    <section class="filtros-section">
+        <div class="container">
+            <h2>FILTRAR POR ESTADO</h2>
+            <div class="filtros-grid">
+                <button class="filtro-btn active" data-estado="todos">Todos</button>
+                <button class="filtro-btn" data-estado="sp">São Paulo</button>
+                <button class="filtro-btn" data-estado="rj">Rio de Janeiro</button>
+                <button class="filtro-btn" data-estado="mg">Minas Gerais</button>
+                <button class="filtro-btn" data-estado="pr">Paraná</button>
+                <button class="filtro-btn" data-estado="rs">Rio Grande do Sul</button>
+                <button class="filtro-btn" data-estado="sc">Santa Catarina</button>
+                <button class="filtro-btn" data-estado="go">Goiás</button>
+                <button class="filtro-btn" data-estado="df">Distrito Federal</button>
+                <button class="filtro-btn" data-estado="ba">Bahia</button>
+                <button class="filtro-btn" data-estado="ce">Ceará</button>
+                <button class="filtro-btn" data-estado="pe">Pernambuco</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Filiais -->
+    <section class="filiais-grid-section">
+        <div class="container">
+            <div class="filiais-grid" id="filiaisGrid">
+                <!-- Filial São Paulo - Centro -->
+                <div class="filial-card" data-estado="sp" data-cidade="sao-paulo">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                        <div class="filial-badge">Matriz</div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>SÃO PAULO - CENTRO</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rua da Consolação, 1234<br>Centro - São Paulo/SP</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(11) 3333-4444</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial São Paulo - Zona Sul -->
+                <div class="filial-card" data-estado="sp" data-cidade="sao-paulo">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>SÃO PAULO - ZONA SUL</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Paulista, 5678<br>Vila Olímpia - São Paulo/SP</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(11) 4444-5555</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Rio de Janeiro -->
+                <div class="filial-card" data-estado="rj" data-cidade="rio-de-janeiro">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>RIO DE JANEIRO - COPACABANA</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Atlântica, 9876<br>Copacabana - Rio de Janeiro/RJ</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(21) 2222-3333</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Minas Gerais -->
+                <div class="filial-card" data-estado="mg" data-cidade="belo-horizonte">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>BELO HORIZONTE - SAVASSI</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rua Pernambuco, 1111<br>Savassi - Belo Horizonte/MG</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(31) 3333-4444</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Paraná -->
+                <div class="filial-card" data-estado="pr" data-cidade="curitiba">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>CURITIBA - CENTRO</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rua XV de Novembro, 2222<br>Centro - Curitiba/PR</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(41) 4444-5555</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Rio Grande do Sul -->
+                <div class="filial-card" data-estado="rs" data-cidade="porto-alegre">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>PORTO ALEGRE - MOINHOS</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Osvaldo Aranha, 3333<br>Moinhos - Porto Alegre/RS</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(51) 5555-6666</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Santa Catarina -->
+                <div class="filial-card" data-estado="sc" data-cidade="florianopolis">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>FLORIANÓPOLIS - CENTRO</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Rua Felipe Schmidt, 4444<br>Centro - Florianópolis/SC</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(48) 6666-7777</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Goiás -->
+                <div class="filial-card" data-estado="go" data-cidade="goiania">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>GOIÂNIA - SETOR MARISTA</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. T-10, 5555<br>Setor Marista - Goiânia/GO</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(62) 7777-8888</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Distrito Federal -->
+                <div class="filial-card" data-estado="df" data-cidade="brasilia">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>BRASÍLIA - ASA SUL</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>SCS Quadra 1, 6666<br>Asa Sul - Brasília/DF</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(61) 8888-9999</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Bahia -->
+                <div class="filial-card" data-estado="ba" data-cidade="salvador">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>SALVADOR - PITUBA</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Manoel Dias da Silva, 7777<br>Pituba - Salvador/BA</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(71) 9999-0000</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Ceará -->
+                <div class="filial-card" data-estado="ce" data-cidade="fortaleza">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>FORTALEZA - ALDEOTA</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Beira Mar, 8888<br>Aldeota - Fortaleza/CE</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(85) 0000-1111</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filial Pernambuco -->
+                <div class="filial-card" data-estado="pe" data-cidade="recife">
+                    <div class="filial-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-building"></i>
+                            <p>Foto da Filial</p>
+                        </div>
+                    </div>
+                    <div class="filial-content">
+                        <h3>RECIFE - BOA VIAGEM</h3>
+                        <div class="filial-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Av. Boa Viagem, 9999<br>Boa Viagem - Recife/PE</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(81) 1111-2222</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Seg-Sex: 8h às 18h<br>Sáb: 8h às 12h</span>
+                            </div>
+                        </div>
+                        <div class="filial-actions">
+                            <button class="btn btn-primary">Ver no Mapa</button>
+                            <button class="btn btn-secondary">Ligar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SALLUS PROTEÇÃO VEICULAR</h3>
+                    <p>Protegendo seu veículo com excelência há mais de 10 anos</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>LINKS RÁPIDOS</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre Nós</a></li>
+                        <li><a href="index.html#servicos">Serviços</a></li>
+                        <li><a href="index.html#localizacao">Localização</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>SERVIÇOS</h4>
+                    <ul>
+                        <li><a href="#">Proteção Total</a></li>
+                        <li><a href="#">Assistência 24h</a></li>
+                        <li><a href="#">Rastreamento</a></li>
+                        <li><a href="#">Central de Atendimento</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>CONTATO</h4>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@sallus.com.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SALLUS PROTEÇÃO VEICULAR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="filiais.js"></script>
+</body>
+</html>
