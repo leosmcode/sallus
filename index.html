@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SALLUS PROTEÇÃO VEICULAR</title>
+    <link rel="icon" type="image/png" href="img/Logo SALLUS_3.png">
+    <link rel="shortcut icon" type="image/png" href="img/Logo SALLUS_3.png">
+    <link rel="apple-touch-icon" href="Logo SALLUS_3.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,8 +17,9 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <h2>SALLUS</h2>
-                    <span>PROTEÇÃO VEICULAR</span>
+                    <a href="#home" class="nav-logo-link">
+                        <img src="img/Logo SALLUS_3.png" alt="SALLUS PROTEÇÃO VEICULAR" class="nav-logo-img">
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -34,6 +38,14 @@
                         <a href="filiais.html" class="nav-link">Filiais</a>
                     </li>
                 </ul>
+                <div class="header-actions">
+                    <a href="https://wa.me/5548999413996?text=Olá! Gostaria de fazer uma cotação para proteção veicular." 
+                       class="btn-cotacao" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        FAÇA SUA COTAÇÃO
+                    </a>
+                </div>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -43,25 +55,24 @@
         </nav>
     </header>
 
+    <!-- Overlay para menu mobile -->
+    <div class="nav-overlay"></div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-video">
             <video id="heroVideo" autoplay muted loop playsinline>
-                <source src="img/background.mp4" type="video/mp4">
+                <source src="background.mp4" type="video/mp4">
                 Seu navegador não suporta vídeos HTML5.
             </video>
         </div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-title-container">
-                    <h1 class="hero-title">
-                        <span class="title-brand">SALLUS</span>
-                        <span class="title-subtitle">PROTEÇÃO VEICULAR</span>
-                    </h1>
+                    <div class="hero-logo">
+                        <img src="Logo SALLUS_1.png" alt="SALLUS Logo" class="hero-logo-img">
+                    </div>
                 </div>
-                <p class="hero-subtitle">
-                    Segurança e tranquilidade para seu veículo com a melhor proteção do mercado
-                </p>
                 <div class="hero-buttons">
                     <a href="#servicos" class="btn btn-primary">Nossos Serviços</a>
                     <a href="#sobre" class="btn btn-secondary">Conheça a SALLUS</a>
@@ -79,23 +90,23 @@
             </div>
             <div class="sobre-content">
                 <div class="sobre-text">
-                    <h3>NOSSA HISTÓRIA</h3>
+                    <h3>GRUPO SALLUS</h3>
                     <p>
-                        A SALLUS PROTEÇÃO VEICULAR nasceu com o objetivo de oferecer segurança e tranquilidade 
-                        para proprietários de veículos. Com mais de uma década de experiência no mercado, 
-                        desenvolvemos soluções inovadoras e personalizadas para cada cliente.
+                        Grupo Sallus é uma associação voltada para proteção veicular. Surge um novo conceito, 
+                        onde temos como objetivo de prover proteção contra eventualidades que acontecem nos 
+                        momentos que menos esperamos. O melhor de tudo, é que a parcela cabe no seu bolso!
                     </p>
                     <div class="stats">
                         <div class="stat-item">
-                            <h4>10+</h4>
+                            <h4>#######</h4>
                             <p>Anos de experiência</p>
                         </div>
                         <div class="stat-item">
-                            <h4>50K+</h4>
+                            <h4>#######</h4>
                             <p>Veículos protegidos</p>
                         </div>
                         <div class="stat-item">
-                            <h4>99%</h4>
+                            <h4>#######<h4>
                             <p>Satisfação dos clientes</p>
                         </div>
                     </div>
@@ -103,48 +114,153 @@
                 <div class="sobre-image">
                     <div class="image-placeholder">
                         <i class="fas fa-shield-alt"></i>
-                        <p>Imagem da equipe SALLUS</p>
+                        <p>Imagem da equipe SALLUS ou LOGO</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Serviços Section -->
-    <section id="servicos" class="servicos">
+    <!-- Benefícios Section -->
+    <section id="servicos" class="beneficios">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">NOSSOS SERVIÇOS</h2>
-                <p class="section-subtitle">Soluções completas para proteção veicular</p>
+                <h2 class="section-title">BENEFÍCIOS DO ASSOCIADO (EM DESENVOLVIMENTO)</h2>
             </div>
-            <div class="servicos-grid">
-                <div class="servico-card">
-                    <div class="servico-icon">
-                        <i class="fas fa-car-crash"></i>
+            <div class="beneficios-content">
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track" id="beneficiosCarousel">
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <h3 class="beneficio-title">Cobertura Nacional</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 class="beneficio-title">100% Fipe</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-tire"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Pneu Furado</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-gas-pump"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Pane Seca</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-battery-half"></i>
+                                </div>
+                                <h3 class="beneficio-title">Recarga de Bateria</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <h3 class="beneficio-title">Carros Rebaixados</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-id-card"></i>
+                                </div>
+                                <h3 class="beneficio-title">Sem Perfil</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-cloud-rain"></i>
+                                </div>
+                                <h3 class="beneficio-title">Cobertura Granizo</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-window-maximize"></i>
+                                </div>
+                                <h3 class="beneficio-title">Proteção Vidros</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-taxi"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Taxi</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Hotel</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Chaveiro</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-bus"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Ônibus</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-hospital"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Hospitalar</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3 class="beneficio-title">Auxílio Funeral</h3>
+                            </div>
+                            <div class="beneficio-box">
+                                <div class="beneficio-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h3 class="beneficio-title">Guincho 24h</h3>
+                            </div>
+                        </div>
                     </div>
-                    <h3>PROTEÇÃO TOTAL</h3>
-                    <p>Cobertura completa contra roubo, furto e danos acidentais</p>
                 </div>
-                <div class="servico-card">
-                    <div class="servico-icon">
-                        <i class="fas fa-tools"></i>
+            </div>
+            <div class="beneficios-cta">
+                <a href="https://wa.me/5548999413996?text=Olá! Gostaria de fazer parte do Grupo Sallus." 
+                   class="btn-faca-parte" 
+                   target="_blank">
+                    FAÇA PARTE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Logo -->
+    <section class="logo-section">
+        <div class="container">
+            <div class="logo-content">
+                <div class="photos-container">
+                    <DIV>
+                        <h2 class="section-title2">TESTE DE SECTION</h2>
+                    </DIV>
+                    <div class="photo-box">
+                        <img src="1.png" alt="Foto 1" class="photo-image">
                     </div>
-                    <h3>ASSISTÊNCIA 24H</h3>
-                    <p>Suporte técnico e mecânico disponível 24 horas por dia</p>
+                    <div class="photo-box">
+                        <img src="2.png" alt="Foto 2" class="photo-image">
                 </div>
-                <div class="servico-card">
-                    <div class="servico-icon">
-                        <i class="fas fa-map-marker-alt"></i>
+                    <div class="photo-box">
+                        <img src="3.png" alt="Foto 3" class="photo-image">
                     </div>
-                    <h3>RASTREAMENTO</h3>
-                    <p>Sistema de rastreamento GPS para localização em tempo real</p>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-icon">
-                        <i class="fas fa-phone"></i>
+                    <div class="photo-box">
+                        <img src="4.png" alt="Ver Ser SALLUS" class="ver-ser-image">
                     </div>
-                    <h3>CENTRAL DE ATENDIMENTO</h3>
-                    <p>Atendimento especializado e personalizado para cada cliente</p>
                 </div>
             </div>
         </div>
@@ -184,10 +300,16 @@
             </div>
             <div class="localizacao-content">
                 <div class="map-container">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map"></i>
-                        <p>Mapa interativo das localizações</p>
-                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.5!2d-49.0!3d-28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2sAv.%20Jos%C3%A9%20Ac%C3%A1cio%20Moreira%2C%20501%20-%20Humait%C3%A1%2C%20Tubar%C3%A3o%20-%20SC%2C%2088704-001!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="google-map">
+                    </iframe>
                 </div>
                 <div class="contato-info">
                     <h3>ENTRE EM CONTATO</h3>
@@ -195,7 +317,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>TELEFONE</h4>
-                            <p>(11) 99999-9999</p>
+                            <p>+55 48 99941-3996</p>
                         </div>
                     </div>
                     <div class="contato-item">
@@ -251,9 +373,9 @@
                 </div>
                 <div class="footer-section">
                     <h4>CONTATO</h4>
-                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-phone"></i> +55 48 99941-3996</p>
                     <p><i class="fas fa-envelope"></i> contato@sallus.com.br</p>
-                    <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. José Acácio Moreira, 501 - Humaitá, Tubarão - SC</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -263,7 +385,7 @@
     </footer>
 
     <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da SALLUS." 
+    <a href="https://wa.me/5548999413996?text=Olá! Gostaria de saber mais sobre os serviços da SALLUS." 
        class="whatsapp-float" 
        target="_blank" 
        rel="noopener noreferrer"

@@ -1,17 +1,60 @@
 // Navegação mobile
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+const navOverlay = document.querySelector('.nav-overlay');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : 'auto';
+});
+
+// Fechar menu ao clicar no overlay
+navOverlay.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
 });
 
 // Fechar menu ao clicar em um link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
 }));
+
+// Criar botão mobile de cotação dinamicamente
+function createMobileQuoteButton() {
+    if (window.innerWidth <= 768) {
+        const navMenu = document.querySelector('.nav-menu');
+        const existingButton = document.querySelector('.mobile-quote-button');
+        
+        if (!existingButton && navMenu) {
+            const buttonLi = document.createElement('li');
+            buttonLi.className = 'nav-item mobile-quote-button';
+            buttonLi.innerHTML = `
+                <a href="https://wa.me/5548999413996?text=Olá! Gostaria de fazer uma cotação dos serviços da SALLUS." 
+                   class="btn-cotacao-mobile" 
+                   target="_blank">FAÇA SUA COTAÇÃO</a>
+            `;
+            navMenu.appendChild(buttonLi);
+        }
+    } else {
+        const existingButton = document.querySelector('.mobile-quote-button');
+        if (existingButton) {
+            existingButton.remove();
+        }
+    }
+}
+
+// Criar botão na inicialização
+createMobileQuoteButton();
+
+// Recriar botão ao redimensionar a janela
+window.addEventListener('resize', createMobileQuoteButton);
 
 // Scroll suave para seções
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -31,13 +74,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(26, 26, 26, 0.4)';
-        header.style.backdropFilter = 'blur(20px)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        header.style.background = 'rgba(0, 0, 0, 0.98)';
+        header.style.backdropFilter = 'blur(25px)';
+        header.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.4)';
     } else {
-        header.style.background = 'rgba(26, 26, 26, 0.1)';
-        header.style.backdropFilter = 'blur(15px)';
-        header.style.boxShadow = 'none';
+        header.style.background = 'rgba(0, 0, 0, 0.95)';
+        header.style.backdropFilter = 'blur(20px)';
+        header.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
     }
 });
 
@@ -230,3 +273,28 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Carrossel Infinito de Benefícios
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('beneficiosCarousel');
+    if (!carousel) return;
+    
+    // Duplicar os benefícios para criar efeito infinito
+    function duplicateBenefits() {
+        const benefits = carousel.innerHTML;
+        carousel.innerHTML = benefits + benefits; // Duplica o conteúdo
+    }
+    
+    // Inicializar carrossel infinito
+    duplicateBenefits();
+    
+    
+    // Pausar animação quando a página não está visível
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            carousel.style.animationPlayState = 'paused';
+        } else {
+            carousel.style.animationPlayState = 'running';
+        }
+    });
+});

@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Atualiza o título com o contador
         const titulo = document.querySelector('.filiais-title');
         if (estadoAtivo === 'todos') {
-            titulo.textContent = `Nossas Filiais (${contador})`;
+            titulo.textContent = `Nossas Filiais`;
         } else {
             const nomeEstado = estadosMap[estadoAtivo];
             titulo.textContent = `Filiais em ${nomeEstado} (${contador})`;
