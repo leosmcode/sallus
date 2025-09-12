@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Iniciar o vídeo
-        heroVideo.src = 'img/background.mp4';
+        heroVideo.src = 'background.mp4';
         heroVideo.load();
     }
     
