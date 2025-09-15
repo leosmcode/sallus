@@ -84,6 +84,43 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Função para controlar o botão "Ver Mais" dos benefícios
+function toggleBeneficios() {
+    const hiddenBoxes = document.querySelectorAll('.beneficio-box-hidden');
+    const btnVerMais = document.querySelector('.btn-ver-mais');
+    const verMaisTexto = document.querySelector('.ver-mais-texto');
+    const verMaisIcon = document.querySelector('.ver-mais-icon');
+    
+    // Verificar se as boxes estão escondidas
+    const isHidden = hiddenBoxes[0].style.display === 'none' || 
+                    window.getComputedStyle(hiddenBoxes[0]).display === 'none';
+    
+    if (isHidden) {
+        // Mostrar todas as boxes escondidas
+        hiddenBoxes.forEach(box => {
+            box.style.display = 'block';
+        });
+        
+        // Atualizar botão
+        verMaisTexto.textContent = 'Ver Menos Benefícios';
+        btnVerMais.classList.add('expanded');
+        
+        // Scroll suave para a seção
+        document.getElementById('beneficios').scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    } else {
+        // Esconder as boxes extras
+        hiddenBoxes.forEach(box => {
+            box.style.display = 'none';
+        });
+        
+        // Atualizar botão
+        verMaisTexto.textContent = 'Ver Mais Benefícios';
+        btnVerMais.classList.remove('expanded');
+    }
+}
 // Animação de entrada dos elementos
 const observerOptions = {
     threshold: 0.1,
@@ -297,4 +334,8 @@ document.addEventListener('DOMContentLoaded', function() {
             carousel.style.animationPlayState = 'running';
         }
     });
+
+
 });
+
+
