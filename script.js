@@ -57,16 +57,112 @@ createMobileQuoteButton();
 window.addEventListener('resize', createMobileQuoteButton);
 
 // Scroll suave para seções
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM carregado, configurando scroll suave...');
+    
+    // Função para scroll suave
+    function smoothScrollTo(target) {
+        const headerHeight = 80;
+        let targetPosition = target.offsetTop - headerHeight;
+        
+        // Garantir que a posição não seja negativa
+        if (targetPosition < 0) {
+            targetPosition = 0;
+        }
+        
+        console.log('Scroll para posição:', targetPosition);
+        console.log('Posição atual:', window.pageYOffset);
+        console.log('Offset do target:', target.offsetTop);
+        
+        // Usar scrollIntoView como método principal
+        try {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
+            
+            // Ajustar para o header fixo
+            setTimeout(() => {
+                window.scrollBy(0, -headerHeight);
+            }, 100);
+            
+        } catch (e) {
+            console.log('scrollIntoView falhou, usando window.scrollTo');
+            // Fallback para scroll direto
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         }
+    }
+    
+    // Função para configurar scroll em todos os links
+    function setupScrollLinks() {
+        // Todos os links com âncora
+        const allLinks = document.querySelectorAll('a[href^="#"]');
+        console.log('Links encontrados:', allLinks.length);
+        
+        allLinks.forEach(link => {
+            // Remover listeners existentes
+            link.removeEventListener('click', handleLinkClick);
+            // Adicionar novo listener
+            link.addEventListener('click', handleLinkClick);
+        });
+    }
+    
+    // Função para lidar com cliques nos links
+    function handleLinkClick(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        
+        console.log('Link clicado:', this.href);
+        console.log('Target encontrado:', target);
+        
+        if (target) {
+            smoothScrollTo(target);
+        } else {
+            console.log('Target não encontrado:', targetId);
+        }
+    }
+    
+    // Configurar scroll inicial
+    setupScrollLinks();
+    
+    // Teste direto para debug
+    setTimeout(() => {
+        console.log('=== TESTE DE DEBUG ===');
+        const testLinks = document.querySelectorAll('.nav-link');
+        console.log('Nav-links encontrados:', testLinks.length);
+        
+        testLinks.forEach((link, index) => {
+            console.log(`Link ${index}:`, link.href, link.textContent);
+            const targetId = link.getAttribute('href');
+            const target = document.querySelector(targetId);
+            console.log(`Target ${index}:`, target);
+        });
+        
+        // Teste manual de scroll
+        const sobreSection = document.querySelector('#sobre');
+        if (sobreSection) {
+            console.log('Teste manual: Seção sobre encontrada');
+            console.log('Posição da seção sobre:', sobreSection.offsetTop);
+        }
+    }, 1000);
+    
+    // Reconfigurar se o DOM mudar
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                setupScrollLinks();
+            }
+        });
+    });
+    
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
     });
 });
 
@@ -86,23 +182,20 @@ window.addEventListener('scroll', () => {
 
 // Função para controlar o botão "Ver Mais" dos benefícios
 function toggleBeneficios() {
-    const hiddenBoxes = document.querySelectorAll('.beneficio-box-hidden');
-    const btnVerMais = document.querySelector('.btn-ver-mais');
+    const beneficiosContainer = document.querySelector('.beneficios');
+    const btnVerMais = document.querySelector('.ver-mais-btn');
     const verMaisTexto = document.querySelector('.ver-mais-texto');
     const verMaisIcon = document.querySelector('.ver-mais-icon');
     
-    // Verificar se as boxes estão escondidas
-    const isHidden = hiddenBoxes[0].style.display === 'none' || 
-                    window.getComputedStyle(hiddenBoxes[0]).display === 'none';
+    // Verificar se está expandido
+    const isExpanded = beneficiosContainer.classList.contains('beneficios-expandido');
     
-    if (isHidden) {
-        // Mostrar todas as boxes escondidas
-        hiddenBoxes.forEach(box => {
-            box.style.display = 'block';
-        });
+    if (!isExpanded) {
+        // Expandir benefícios
+        beneficiosContainer.classList.add('beneficios-expandido');
         
         // Atualizar botão
-        verMaisTexto.textContent = 'Ver Menos Benefícios';
+        verMaisTexto.textContent = 'VER MENOS';
         btnVerMais.classList.add('expanded');
         
         // Scroll suave para a seção
@@ -111,13 +204,11 @@ function toggleBeneficios() {
             block: 'start' 
         });
     } else {
-        // Esconder as boxes extras
-        hiddenBoxes.forEach(box => {
-            box.style.display = 'none';
-        });
+        // Recolher benefícios
+        beneficiosContainer.classList.remove('beneficios-expandido');
         
         // Atualizar botão
-        verMaisTexto.textContent = 'Ver Mais Benefícios';
+        verMaisTexto.textContent = 'VER MAIS';
         btnVerMais.classList.remove('expanded');
     }
 }
@@ -271,6 +362,12 @@ window.addEventListener('scroll', () => {
 
 // Efeito de partículas no hero (opcional)
 function createParticle() {
+    const heroShapes = document.querySelector('.hero-shapes');
+    if (!heroShapes) {
+        console.log('Elemento .hero-shapes não encontrado, pulando criação de partícula');
+        return;
+    }
+    
     const particle = document.createElement('div');
     particle.style.position = 'absolute';
     particle.style.width = '4px';
@@ -282,7 +379,7 @@ function createParticle() {
     particle.style.top = '100%';
     particle.style.animation = 'float 8s linear infinite';
     
-    document.querySelector('.hero-shapes').appendChild(particle);
+    heroShapes.appendChild(particle);
     
     setTimeout(() => {
         particle.remove();

@@ -15,7 +15,6 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
@@ -32,7 +31,7 @@
                         <a href="#sobre" class="nav-link">Sobre Nós</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#servicos" class="nav-link">Serviços</a>
+                        <a href="#beneficios" class="nav-link">Benefícios</a>
                     </li>
                     <li class="nav-item">
                         <a href="#localizacao" class="nav-link">Onde Estamos</a>
@@ -56,10 +55,8 @@
         </nav>
     </header>
 
-    <!-- Overlay para menu mobile -->
     <div class="nav-overlay"></div>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-video">
             <video id="heroVideo" autoplay muted loop playsinline>
@@ -75,61 +72,56 @@
                     </div>
                 </div>
                 <div class="hero-buttons">
-                    <a href="#servicos" class="btn btn-primary">Nossos Serviços</a>
-                    <a href="#sobre" class="btn btn-secondary">Conheça a SALLUS</a>
+                    <a href="#beneficios" class="btn btn-primary">Nossos Benefícios</a>
+                    <a href="#sobre" class="btn btn-secondary">Conheça a <span class="sallus-destaque">SALLUS</span></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre Nós Section -->
-    <div class="sobre-background">
+    <div class="sobre-beneficios-background">
         <section id="sobre" class="sobre">
             <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">SOBRE A SALLUS</h2>
-                <p class="section-subtitle">Mais de 10 MIL veículos sendo protegidos com excelência.</p>
-            </div>
-            <div class="sobre-content">
-                <div class="sobre-text">
-                    <h3>GRUPO SALLUS</h3>
-                    <p>
-                        Grupo Sallus é uma associação voltada para proteção veicular. <br>Temos como objetivo prover
-                        proteção com agilidade e excelência contra eventualidades que acontecem nos momentos que menos
-                        esperamos. <br>O melhor de tudo, é que a contribuição cabe no seu bolso.
-                    </p>
+                <div class="section-header">
+                    <h2 class="section-title title-underline title-underline-center">SOBRE A <span class="sallus-destaque">SALLUS</span></h2>
                 </div>
-                <div class="sobre-image">
-                    <img src="back_carro.png" alt="SALLUS - Proteção Veicular" class="sobre-imagem">
+                <div class="sobre-content">
+                    <div class="sobre-text">
+                        <p>
+                            <span class="sallus-destaque">SALLUS</span> é uma associação voltada para proteção veicular. <br>Temos como objetivo prover
+                            proteção com agilidade e excelência contra eventualidades que acontecem nos momentos que menos esperamos. 
+                            <br>O melhor de tudo, é que a contribuição cabe no seu bolso.
+                        </p>
+                    </div>
+                    <div class="sobre-image">
+                        <img src="back_carro.png" alt="SALLUS - Proteção Veicular" class="sobre-imagem">
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
-    </div>
 
-    <!-- Seção de Benefícios com Background -->
-    <div class="beneficios-background">
         <section id="beneficios" class="beneficios">
             <div class="container">
                 <div class="beneficios-layout">
-                    <!-- Título à Esquerda -->
-                    <div class="beneficios-titulo">
-                        <h2 class="beneficios-title">
-                            <span class="texto-branco">SENDO ASSOCIADO</span><br>
-                            <span class="texto-verde">SALLUS</span><br>
-                            <span class="texto-branco">VOCÊ TÊM</span><br>
-                            <span class="texto-verde">BENEFÍCIOS</span><br>
-                            <span class="texto-verde">EXCLUSIVOS</span>
-                        </h2>
-                        <div class="protecao-24h">
-                            <i class="fas fa-clock"></i>
-                            <span>PROTEÇÃO <span class="horas-verde">24 HORAS</span> PARA SEU VEICULO</span>
+                    <div class="beneficios-content">
+                        <div class="beneficios-titulo">
+                            <h2 class="beneficios-title">
+                                <span class="texto-branco">SENDO ASSOCIADO</span><br>
+                                <span class="texto-verde">SALLUS</span><br>
+                                <span class="texto-branco">VOCÊ TÊM</span><br>
+                                <span class="texto-verde">BENEFÍCIOS</span><br>
+                                <span class="texto-verde">EXCLUSIVOS</span>
+                            </h2>
+                            <p class="beneficios-subtitle">
+                                Descubra todos os benefícios exclusivos que você tem direito como associado SALLUS. 
+                                Proteção completa para seu veículo com cobertura nacional.
+                            </p>
                         </div>
+                        
+                        <div class="beneficios-boxes">
+                    <div class="beneficio-box">
+                        <div class="beneficio-texto">500 mil para terceiros</div>
                     </div>
-                    
-                    <!-- Boxes à Direita -->
-                    <div class="beneficios-boxes">
-                    <!-- Coluna 1 -->
                     <div class="beneficio-box">
                         <div class="beneficio-texto">Até 100% da Fipe</div>
                     </div>
@@ -142,7 +134,7 @@
                     <div class="beneficio-box">
                         <div class="beneficio-texto">Auxílio hospedagem/hotel</div>
                     </div>
-                    <div class="beneficio-box">
+                    <div class="beneficio-box beneficio-box-hidden">
                         <div class="beneficio-texto">Até 60 guinchos por ano</div>
                     </div>
                     <div class="beneficio-box beneficio-box-hidden">
@@ -151,8 +143,6 @@
                     <div class="beneficio-box beneficio-box-hidden">
                         <div class="beneficio-texto">Auxílio hospitalar</div>
                     </div>
-                    
-                    <!-- Coluna 2 -->
                     <div class="beneficio-box beneficio-box-hidden">
                         <div class="beneficio-texto">Reparação avulsa</div>
                     </div>
@@ -177,8 +167,6 @@
                     <div class="beneficio-box beneficio-box-hidden">
                         <div class="beneficio-texto">Auxílio carro reserva</div>
                     </div>
-                    
-                    <!-- Coluna 3 -->
                     <div class="beneficio-box beneficio-box-hidden">
                         <div class="beneficio-texto">Carros Rebaixados</div>
                     </div>
@@ -192,97 +180,110 @@
                         <div class="beneficio-texto">Sem perfil de condutor <br>(porém habilitado)</div>
                     </div>
                     <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">500 mil para terceiros</div>
-                    </div>
-                    <div class="beneficio-box beneficio-box-hidden">
                         <div class="beneficio-texto">Chaveiro</div>
                     </div>
                     <div class="beneficio-box beneficio-box-hidden">
                         <div class="beneficio-texto">Auxílio taxi</div>
                     </div>
+                        </div>
+                        
+                        <div class="ver-mais-container">
+                            <button class="ver-mais-btn" onclick="toggleBeneficios()">
+                                <span class="ver-mais-texto">VER MAIS</span>
+                                <i class="fas fa-chevron-down ver-mais-icon"></i>
+                            </button>
+                        </div>
                     </div>
-                    
-                    <!-- Botão Ver Mais (apenas mobile) -->
-                    <div class="ver-mais-container">
-                        <button class="btn-ver-mais" onclick="toggleBeneficios()">
-                            <span class="ver-mais-texto">Ver Mais Benefícios</span>
-                            <i class="fas fa-chevron-down ver-mais-icon"></i>
-                        </button>
-                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Por que ser SALLUS -->
-    <section class="porque-sallus">
+        <!-- Banner de Assistência 24h -->
+        <section class="assistencia-banner">
+            <div class="banner-container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h2 class="banner-title">ASSISTÊNCIA 24 HORAS</h2>
+                    </div>
+                    <div class="banner-icon">
+                        <div class="banner-logo">
+                            <img src="Logo SALLUS_3.png" alt="Logo SALLUS">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="porque-sallus">
         <div class="container">
             <div class="porque-sallus-header">
-                <h2 class="porque-sallus-titulo">MAS POR QUE SE ASSOCIAR A <span class="sallus-verde-titulo">SALLUS</span>?</h2>
+                <h2 class="porque-sallus-titulo title-underline title-underline-center">MAS POR QUE SE ASSOCIAR A <span class="sallus-verde-titulo">SALLUS</span>?</h2>
             </div>
             <div class="porque-sallus-grid">
                 
-                    <!-- Box 2: Presente em + de 4 estados -->
+                    <div class="porque-box porque-box-1">
+                        <div class="porque-icon">
+                            <img src="500_terceiros.png" alt="500 mil para terceiros" class="porque-imagem">
+                        </div>
+                        <p class="porque-texto-verde">500 mil para terceiros</p>
+                    </div>
+                
                     <div class="porque-box porque-box-2">
                         <div class="porque-icon">
                             <img src="pin-de-localizacao.png" alt="Localização" class="porque-imagem">
                         </div>
-                        <p class="porque-texto">PRESENTE EM + DE 4 ESTADOS</p>
+                        <p class="porque-texto">PRESENTE EM MAIS DE 4 ESTADOS</p>
                     </div>
                 
-                <!-- Box 3: 500 mil para terceiros -->
                 <div class="porque-box porque-box-3">
-                    <p class="porque-texto-verde">3 MIL PARA TERCEIROS</p>
-                </div>
-                
-                <!-- Box 4: PROTEÇÃO 24H -->
-                <div class="porque-box porque-box-4">
                     <div class="porque-icon">
                         <img src="seguro.png" alt="Proteção" class="porque-imagem">
                     </div>
                     <p class="porque-texto-verde">PROTEÇÃO 24H</p>
                 </div>
                 
-                <!-- Box 5: Mais de 10 mil veículos -->
-                <div class="porque-box porque-box-5">
+                <div class="porque-box porque-box-4">
                     <div class="porque-icon">
                         <img src="seguro-de-automovel.png" alt="Seguro Automóvel" class="porque-imagem">
                     </div>
                     <p class="porque-texto-branco">MAIS DE 10 MIL VEÍCULOS ASSOCIADOS</p>
                 </div>
                 
-                <!-- Box 6: + de 60 guinchos -->
-                <div class="porque-box porque-box-6">
+                <div class="porque-box porque-box-5">
                     <div class="porque-icon">
                         <img src="tow-truck.png" alt="Guincho" class="porque-imagem">
                     </div>
-                    <p class="porque-texto-cinza">+ DE 60 GUINCHOS AO ANO</p>
+                    <p class="porque-texto-cinza">MAIS DE 60 GUINCHOS AO ANO</p>
                 </div>
                 
-                <!-- Box 7: Botão CHAME A SALLUS -->
-                <div class="porque-box porque-box-7">
+                <div class="porque-box porque-box-6">
                     <a href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre os serviços da SALLUS." target="_blank" class="botao-chame-sallus">
                         <i class="fab fa-whatsapp"></i>
                         <h3>FAÇA PARTE DA SALLUS</h3>
                     </a>
                 </div>
                 
-                <!-- Frase de Destaque: NÃO CONTE COM A SORTE -->
-                <div class="frase-destaque">
-                    <h2 class="frase-destaque-texto">NÃO CONTE COM A SORTE<br>CONTE COM A <span class="sallus-verde-destaque">SALLUS</span></h2>
-                    <div class="sallus-logo-destaque">
-                        <img src="Logo SALLUS_3.png" alt="Logo SALLUS" class="logo-sallus-destaque-img">
-                    </div>
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <!-- Seção do Slogan -->
+    <section class="slogan-section">
+        <div class="container">
+            <div class="slogan-content">
+                <h2 class="slogan-texto">NÃO CONTE COM A SORTE<br>CONTE COM A <span class="sallus-destaque">SALLUS</span></h2>
+                <div class="slogan-logo">
+                    <img src="Logo SALLUS_3.png" alt="Logo SALLUS" class="slogan-logo-img">
                 </div>
             </div>
         </div>
     </section>
-    </div>
 
-    <!-- Seção de Depoimentos -->
     <section class="depoimentos-section">
         <div class="container">
             <div class="depoimentos-header">
-                <h2 class="depoimentos-title">DEPOIMENTOS DOS CLIENTES</h2>
+                <h2 class="depoimentos-title title-underline title-underline-center">DEPOIMENTOS DOS CLIENTES</h2>
             </div>
             
             <div class="depoimentos-grid">
@@ -349,21 +350,17 @@
         </div>
     </section>
 
-    <!-- Seção App SALLUS -->
     <section class="app-section">
         <div class="container">
             <div class="app-content">
-                <!-- Lado Esquerdo - Foto com Efeito -->
                 <div class="app-image-container">
                     <img src="app1.png" alt="App SALLUS" class="app-image">
                 </div>
                 
-                <!-- Lado Direito - Informações do App -->
                 <div class="app-info">
-                    <h2 class="app-title">TUDO NA PALMA DA SUA MÃO</h2>
-                    <p class="app-description">Com o aplicativo da SALLUS, a proteção do seu veículo fica ainda mais simples!</p>
+                    <h2 class="app-title title-underline title-underline-left">TUDO NA PALMA DA SUA MÃO</h2>
+                    <p class="app-description">Com o aplicativo da <span class="sallus-destaque">SALLUS</span>, a proteção do seu veículo fica ainda mais simples!</p>
                     
-                    <!-- Botões de Download -->
                     <div class="app-buttons">
                         <a href="https://play.google.com/store/apps/details?id=br.com.protefortprotecaoveicular&hl=pt&pli=1" target="_blank" class="app-button google-play">
                             <img src="googleplay.png" alt="Google Play" class="app-icon">
@@ -373,97 +370,92 @@
                         </a>
                     </div>
                     
-                    <p class="app-cta">Baixe agora e leve a SALLUS com você para onde você for.</p>
+                    <p class="app-cta">Baixe agora e leve a <span class="sallus-destaque">SALLUS</span> com você para onde você for.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Onde Estamos Section -->
-    <div class="localizacao-background">
+    <div class="localizacao-footer-background">
         <section id="localizacao" class="localizacao">
             <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">ONDE ESTAMOS</h2>
-            </div>
-            <div class="localizacao-content">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.5!2d-49.0!3d-28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2sAv.%20Jos%C3%A9%20Ac%C3%A1cio%20Moreira%2C%20501%20-%20Humait%C3%A1%2C%20Tubar%C3%A3o%20-%20SC%2C%2088704-001!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
-                        width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen=""
-                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="google-map">
-                    </iframe>
+                <div class="section-header">
+                    <h2 class="section-title title-underline title-underline-center">ONDE ESTAMOS</h2>
                 </div>
-                <div class="contato-info">
-                    <h3>ENTRE EM CONTATO</h3>
-                    <div class="contato-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>TELEFONE</h4>
-                            <p>+55 48 99941-3996</p>
-                        </div>
+                <div class="localizacao-content">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.5!2d-49.0!3d-28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2sAv.%20Jos%C3%A9%20Ac%C3%A1cio%20Moreira%2C%20501%20-%20Humait%C3%A1%2C%20Tubar%C3%A3o%20-%20SC%2C%2088704-001!5e0!3m2!1spt-BR!2sbr!4v1234567890123!5m2!1spt-BR!2sbr"
+                            width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="google-map">
+                        </iframe>
                     </div>
-                    <div class="contato-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>E-MAIL</h4>
-                            <p>contato@sallus.com.br</p>
+                    <div class="contato-info">
+                        <h3 class="title-underline title-underline-left">ENTRE EM CONTATO</h3>
+                        <div class="contato-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>TELEFONE</h4>
+                                <p>+55 48 99941-3996</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contato-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>HORÁRIO DE ATENDIMENTO</h4>
-                            <p>Segunda a Sexta: 8h às 18h</p>
+                        <div class="contato-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-MAIL</h4>
+                                <p>contato@sallus.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contato-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>HORÁRIO DE ATENDIMENTO</h4>
+                                <p>Segunda a Sexta: 8h às 18h</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
-    </div>
 
-    <!-- Footer -->
-    <div class="footer-background">
         <footer class="footer">
             <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="Logo SALLUS_1.png" alt="SALLUS PROTEÇÃO VEICULAR" class="footer-logo-img">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <img src="Logo SALLUS_1.png" alt="SALLUS PROTEÇÃO VEICULAR" class="footer-logo-img">
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <div class="footer-section">
+                        <h4>LINKS RÁPIDOS</h4>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#sobre">Sobre Nós</a></li>
+                            <li><a href="#beneficios">Benefícios</a></li>
+                            <li><a href="#localizacao">Localização</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>CONTATO</h4>
+                        <p><i class="fas fa-phone"></i> +55 48 99941-3996</p>
+                        <p><i class="fas fa-envelope"></i> contato@sallus.com.br</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. José Acácio Moreira, 501 - Humaitá, Tubarão - SC</p>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>LINKS RÁPIDOS</h4>
-                    <ul>
-                        <li><a href="#home">Início</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#localizacao">Localização</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>CONTATO</h4>
-                    <p><i class="fas fa-phone"></i> +55 48 99941-3996</p>
-                    <p><i class="fas fa-envelope"></i> contato@sallus.com.br</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Av. José Acácio Moreira, 501 - Humaitá, Tubarão - SC</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 <span class="sallus-destaque">SALLUS</span> PROTEÇÃO VEICULAR. Todos os direitos reservados.</p>
+                    <p class="volcode-credit">Desenvolvido por <a href="https://www.instagram.com/volcode" target="_blank" rel="noopener noreferrer" class="volcode-link">VOLCODE</a></p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 SALLUS PROTEÇÃO VEICULAR. Todos os direitos reservados.</p>
-                <p class="volcode-credit">Desenvolvido por <a href="https://www.instagram.com/volcode" target="_blank" rel="noopener noreferrer" class="volcode-link">Volcode</a></p>
-            </div>
-        </div>
         </footer>
     </div>
 
-    <!-- Botão Flutuante WhatsApp -->
     <a href="https://wa.me/5548999413996?text=Olá! Gostaria de saber mais sobre os serviços da SALLUS."
         class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
         <i class="fab fa-whatsapp"></i>
