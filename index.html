@@ -77,24 +77,45 @@
                 </div>
             </div>
         </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
     </section>
 
     <div class="sobre-beneficios-background">
         <section id="sobre" class="sobre">
-            <div class="container">
-                <div class="section-header">
+            <div class="sobre-header">
                     <h2 class="section-title title-underline title-underline-center">SOBRE A <span class="sallus-destaque">SALLUS</span></h2>
+                <p class="section-subtitle">Proteção veicular com excelência e agilidade para você e seu veículo</p>
+            </div>
+            
+            <div class="sobre-content">
+                <div class="sobre-intro">
+                    <p>
+                        A <span class="sallus-destaque">SALLUS</span> é uma associação especializada em proteção veicular, 
+                        comprometida em oferecer soluções completas e acessíveis para a segurança do seu patrimônio.
+                    </p>
                 </div>
-                <div class="sobre-content">
-                    <div class="sobre-text">
-                        <p>
-                            <span class="sallus-destaque">SALLUS</span> é uma associação voltada para proteção veicular. <br>Temos como objetivo prover
-                            proteção com agilidade e excelência contra eventualidades que acontecem nos momentos que menos esperamos. 
-                            <br>O melhor de tudo, é que a contribuição cabe no seu bolso.
-                        </p>
+
+                <!-- Estatísticas -->
+                <div class="sobre-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10.000+</div>
+                        <div class="stat-label">VEÍCULOS PROTEGIDOS</div>
                     </div>
-                    <div class="sobre-image">
-                        <img src="back_carro.png" alt="SALLUS - Proteção Veicular" class="sobre-imagem">
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">ESTADOS ATENDIDOS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">ASSISTÊNCIA DIÁRIA</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">22</div>
+                        <div class="stat-label">BENEFÍCIOS INCLUSOS</div>
                     </div>
                 </div>
             </div>
@@ -102,97 +123,224 @@
 
         <section id="beneficios" class="beneficios">
             <div class="container">
-                <div class="beneficios-layout">
-                    <div class="beneficios-content">
-                        <div class="beneficios-titulo">
-                            <h2 class="beneficios-title">
-                                <span class="texto-branco">SENDO ASSOCIADO</span><br>
-                                <span class="texto-verde">SALLUS</span><br>
-                                <span class="texto-branco">VOCÊ TÊM</span><br>
-                                <span class="texto-verde">BENEFÍCIOS</span><br>
-                                <span class="texto-verde">EXCLUSIVOS</span>
+                <div class="beneficios-header">
+                    <h2 class="section-title title-underline title-underline-center">
+                        <span class="texto-branco">BENEFÍCIOS</span> <span class="sallus-destaque">EXCLUSIVOS</span>
                             </h2>
-                            <p class="beneficios-subtitle">
-                                Descubra todos os benefícios exclusivos que você tem direito como associado SALLUS. 
-                                Proteção completa para seu veículo com cobertura nacional.
-                            </p>
+                    <p class="section-subtitle">Descubra todos os <strong>22 benefícios</strong></p>
+                    <div class="beneficios-count">
+                        <span class="count-number">22</span>
+                        <span class="count-text">BENEFÍCIOS INCLUSOS</span>
+                    </div>
+                </div>
+                
+                <div class="beneficios-container">
+                    <div class="beneficios-grid" id="beneficiosGrid">
+                        <div class="beneficio-card principal">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>500 MIL PARA TERCEIROS</h4>
+                                <p>Cobertura completa para danos a terceiros</p>
+                            </div>
                         </div>
-                        
-                        <div class="beneficios-boxes">
-                    <div class="beneficio-box">
-                        <div class="beneficio-texto">500 mil para terceiros</div>
+                        <div class="beneficio-card principal">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>ATÉ 100% DA FIPE</h4>
+                                <p>Valor total do veículo conforme tabela FIPE</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card principal">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>GUINCHO ILIMITADO</h4>
+                                <p>Em caso de colisão, sem limite de uso</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>DANO PATRIMONIAL</h4>
+                                <p>Proteção para bens materiais</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO HOSPEDAGEM/HOTEL</h4>
+                                <p>Suporte em caso de necessidade</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>ATÉ 60 GUINCHOS POR ANO</h4>
+                                <p>Serviço de guincho disponível</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>LOCALIZADOR</h4>
+                                <p>Rastreamento do seu veículo</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO HOSPITALAR</h4>
+                                <p>Suporte em emergências médicas</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>REPARAÇÃO AVULSA</h4>
+                                <p>Consertos sem burocracia</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-gas-pump"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO PANE SECA</h4>
+                                <p>Suporte quando acabar o combustível</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-ban"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>SEM FRANQUIA TERCEIRO</h4>
+                                <p>Sem cobrança adicional para terceiros</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-cloud-rain"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>DANOS DA NATUREZA</h4>
+                                <p>Proteção contra fenômenos naturais</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>DANOS MORAIS A TERCEIROS</h4>
+                                <p>Cobertura para terceiros</p>
+                            </div>
+                        </div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-tire"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO PNEU FUrado</h4>
+                                <p>Troca de pneu em emergências</p>
                     </div>
-                    <div class="beneficio-box">
-                        <div class="beneficio-texto">Até 100% da Fipe</div>
                     </div>
-                    <div class="beneficio-box">
-                        <div class="beneficio-texto">Guincho ilimitado em caso de colisão</div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-battery-half"></i>
                     </div>
-                    <div class="beneficio-box">
-                        <div class="beneficio-texto">Dano patrimonial</div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO RECARGA DE BATERIA</h4>
+                                <p>Chupeta quando a bateria descarregar</p>
                     </div>
-                    <div class="beneficio-box">
-                        <div class="beneficio-texto">Auxílio hospedagem/hotel</div>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Até 60 guinchos por ano</div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-car-side"></i>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Localizador</div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO CARRO RESERVA</h4>
+                                <p>Veículo substituto quando necessário</p>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Auxílio hospitalar</div>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Reparação avulsa</div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-car"></i>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Auxílio pane seca</div>
+                            <div class="beneficio-content">
+                                <h4>CARROS REBAIXADOS</h4>
+                                <p>Cobertura para veículos modificados</p>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Sem franquia terceiro</div>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Danos da natureza</div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-windshield"></i>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Danos morais a terceiros</div>
+                            <div class="beneficio-content">
+                                <h4>70% DO PARA-BRISA</h4>
+                                <p>Reposição parcial do vidro</p>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Auxílio pneu furado</div>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Auxílio recarga de bateria</div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-heart"></i>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Auxílio carro reserva</div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO FUNERAL</h4>
+                                <p>Suporte em momentos difíceis</p>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Carros Rebaixados</div>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">70% do para-brisa</div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-user"></i>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Auxílio funeral</div>
+                            <div class="beneficio-content">
+                                <h4>SEM PERFIL DE CONDUTOR</h4>
+                                <p>Porém habilitado</p>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Sem perfil de condutor <br>(porém habilitado)</div>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Chaveiro</div>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-key"></i>
                     </div>
-                    <div class="beneficio-box beneficio-box-hidden">
-                        <div class="beneficio-texto">Auxílio taxi</div>
+                            <div class="beneficio-content">
+                                <h4>CHAVEIRO</h4>
+                                <p>Serviço de abertura de veículos</p>
                     </div>
                         </div>
-                        
-                        <div class="ver-mais-container">
-                            <button class="ver-mais-btn" onclick="toggleBeneficios()">
-                                <span class="ver-mais-texto">VER MAIS</span>
-                                <i class="fas fa-chevron-down ver-mais-icon"></i>
-                            </button>
+                        <div class="beneficio-card beneficio-hidden">
+                            <div class="beneficio-icon">
+                                <i class="fas fa-taxi"></i>
+                            </div>
+                            <div class="beneficio-content">
+                                <h4>AUXÍLIO TAXI</h4>
+                                <p>Transporte alternativo quando necessário</p>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <div class="beneficios-expand-container">
+                        <button class="beneficios-expand-btn" onclick="toggleBeneficios()">
+                            <span class="expand-text">VER TODOS OS BENEFÍCIOS</span>
+                            <i class="fas fa-chevron-down expand-icon"></i>
+                        </button>
                     </div>
                 </div>
             </div>

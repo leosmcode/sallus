@@ -180,36 +180,45 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Função para controlar o botão "Ver Mais" dos benefícios
+// Função para scroll suave do indicador de scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollIndicator = document.querySelector('.scroll-arrow');
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', function() {
+            const sobreSection = document.querySelector('#sobre');
+            if (sobreSection) {
+                sobreSection.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }
+        });
+    }
+});
+
+// Função para controlar a expansão dos benefícios
 function toggleBeneficios() {
-    const beneficiosContainer = document.querySelector('.beneficios');
-    const btnVerMais = document.querySelector('.ver-mais-btn');
-    const verMaisTexto = document.querySelector('.ver-mais-texto');
-    const verMaisIcon = document.querySelector('.ver-mais-icon');
+    const beneficiosGrid = document.getElementById('beneficiosGrid');
+    const expandBtn = document.querySelector('.beneficios-expand-btn');
+    const expandText = document.querySelector('.expand-text');
+    const expandIcon = document.querySelector('.expand-icon');
     
     // Verificar se está expandido
-    const isExpanded = beneficiosContainer.classList.contains('beneficios-expandido');
+    const isExpanded = beneficiosGrid.classList.contains('expanded');
     
     if (!isExpanded) {
         // Expandir benefícios
-        beneficiosContainer.classList.add('beneficios-expandido');
+        beneficiosGrid.classList.add('expanded');
+        expandBtn.classList.add('expanded');
+        expandText.textContent = 'VER MENOS BENEFÍCIOS';
         
-        // Atualizar botão
-        verMaisTexto.textContent = 'VER MENOS';
-        btnVerMais.classList.add('expanded');
+        // Não fazer scroll - manter posição atual na seção de benefícios
         
-        // Scroll suave para a seção
-        document.getElementById('beneficios').scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
-        });
     } else {
         // Recolher benefícios
-        beneficiosContainer.classList.remove('beneficios-expandido');
-        
-        // Atualizar botão
-        verMaisTexto.textContent = 'VER MAIS';
-        btnVerMais.classList.remove('expanded');
+        beneficiosGrid.classList.remove('expanded');
+        expandBtn.classList.remove('expanded');
+        expandText.textContent = 'VER TODOS OS BENEFÍCIOS';
     }
 }
 // Animação de entrada dos elementos
@@ -303,20 +312,37 @@ document.querySelectorAll('.servico-card').forEach(card => {
 document.addEventListener('DOMContentLoaded', function() {
     const heroVideo = document.getElementById('heroVideo');
     
+    console.log('Tentando carregar vídeo...', heroVideo);
+    
     if (heroVideo) {
+        console.log('Elemento de vídeo encontrado');
+        
+        // Verificar se o vídeo pode ser carregado
+        heroVideo.addEventListener('loadstart', function() {
+            console.log('Iniciando carregamento do vídeo');
+        });
+        
+        heroVideo.addEventListener('loadeddata', function() {
+            console.log('Dados do vídeo carregados');
+        });
+        
+        heroVideo.addEventListener('canplay', function() {
+            console.log('Vídeo pode ser reproduzido');
+            this.play().catch(function(error) {
+                console.log('Erro ao reproduzir vídeo:', error);
+            });
+        });
+        
+        heroVideo.addEventListener('error', function(e) {
+            console.log('Erro ao carregar vídeo:', e);
+        });
+        
         // Reiniciar vídeo quando terminar
         heroVideo.addEventListener('ended', function() {
             console.log('Vídeo terminou, reiniciando...');
             this.currentTime = 0;
             this.play().catch(function(error) {
                 console.log('Erro ao reiniciar vídeo:', error);
-            });
-        });
-        
-        // Fallback para dispositivos que não suportam autoplay
-        heroVideo.addEventListener('canplay', function() {
-            this.play().catch(function(error) {
-                console.log('Autoplay foi bloqueado:', error);
             });
         });
         
@@ -332,8 +358,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Iniciar o vídeo
+        console.log('Definindo src do vídeo...');
         heroVideo.src = 'background.mp4';
         heroVideo.load();
+        
+        // Tentar reproduzir após um pequeno delay
+        setTimeout(() => {
+            console.log('Tentando reproduzir vídeo...');
+            heroVideo.play().catch(function(error) {
+                console.log('Erro ao reproduzir vídeo (timeout):', error);
+            });
+        }, 1000);
+    } else {
+        console.log('Elemento de vídeo não encontrado!');
     }
     
 });
