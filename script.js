@@ -312,67 +312,38 @@ document.querySelectorAll('.servico-card').forEach(card => {
 document.addEventListener('DOMContentLoaded', function() {
     const heroVideo = document.getElementById('heroVideo');
     
-    console.log('Tentando carregar vídeo...', heroVideo);
-    
     if (heroVideo) {
-        console.log('Elemento de vídeo encontrado');
+        console.log('Vídeo encontrado, configurando...');
         
-        // Verificar se o vídeo pode ser carregado
-        heroVideo.addEventListener('loadstart', function() {
-            console.log('Iniciando carregamento do vídeo');
-        });
+        // Configurar vídeo
+        heroVideo.muted = true;
+        heroVideo.loop = true;
+        heroVideo.playsInline = true;
+        heroVideo.autoplay = true;
         
+        // Event listeners
         heroVideo.addEventListener('loadeddata', function() {
-            console.log('Dados do vídeo carregados');
-        });
-        
-        heroVideo.addEventListener('canplay', function() {
-            console.log('Vídeo pode ser reproduzido');
+            console.log('Vídeo carregado com sucesso');
             this.play().catch(function(error) {
-                console.log('Erro ao reproduzir vídeo:', error);
+                console.log('Autoplay bloqueado, tentando novamente...', error);
+                // Tentar novamente após interação do usuário
+                document.addEventListener('click', function playVideo() {
+                    heroVideo.play().catch(console.log);
+                    document.removeEventListener('click', playVideo);
+                }, { once: true });
             });
         });
         
         heroVideo.addEventListener('error', function(e) {
-            console.log('Erro ao carregar vídeo:', e);
+            console.error('Erro no vídeo:', e);
         });
         
-        // Reiniciar vídeo quando terminar
-        heroVideo.addEventListener('ended', function() {
-            console.log('Vídeo terminou, reiniciando...');
-            this.currentTime = 0;
-            this.play().catch(function(error) {
-                console.log('Erro ao reiniciar vídeo:', error);
-            });
-        });
-        
-        // Pausar vídeo quando a página não está visível (economia de bateria)
-        document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                heroVideo.pause();
-            } else {
-                heroVideo.play().catch(function(error) {
-                    console.log('Autoplay foi bloqueado:', error);
-                });
-            }
-        });
-        
-        // Iniciar o vídeo
-        console.log('Definindo src do vídeo...');
-        heroVideo.src = 'background.mp4';
+        // Carregar vídeo
         heroVideo.load();
         
-        // Tentar reproduzir após um pequeno delay
-        setTimeout(() => {
-            console.log('Tentando reproduzir vídeo...');
-            heroVideo.play().catch(function(error) {
-                console.log('Erro ao reproduzir vídeo (timeout):', error);
-            });
-        }, 1000);
     } else {
         console.log('Elemento de vídeo não encontrado!');
     }
-    
 });
 
 // Lazy loading para imagens (quando forem adicionadas)
@@ -471,5 +442,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
 
 
